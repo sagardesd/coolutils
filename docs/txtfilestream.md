@@ -71,6 +71,7 @@ Provides a range wrapper over a stream to allow usage in range-based for loops.
 #include "cool/txtfilestream.hpp"
 
 int main(int argc, char* argv[]) {
+    // argv[1] is the filepath
     std::ifstream stream(argv[1]);
     for (auto& line: cool::IteratorRange(stream)) {
         std::cout << *line << std::endl;
